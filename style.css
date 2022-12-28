@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5e5;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+/*css reset*/
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 250px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+
+.logo{
+
+}
+.mesa{
+
+}
+#menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+#menu li a{
+    color: #4d4d4d;
+    text-decoration: none;
+    font-size: 22px;
+    }
+
+    section{
+        width: 100%;
+        float: left;
+        height: 100vh;
+        position: relative;
+    }
+
+    #home{
+        background-color: #6357FF;
+    }
+
+    #quienes{
+        background-color: #6357FF;
+        
+    }
+
+    #productos{
+        background-color: #e5e5e5;
+    }
+
+    #contacto{
+        background-color: #6357FF;
+    }
+
+    h1{
+        position: absolute;
+        top: 50%;
+    }
+
