@@ -1,0 +1,16 @@
+@font-face {
+  font-family: chivoMedium;
+  src: url(./../fonts/Chivo-Medium.woff);
+}
+@font-face {
+  font-family: chivoLight;
+  src: url(./../fonts/Chivo-Light.woff);
+}
+@font-face {
+  font-family: chivoRegular;
+  src: url(./../fonts/Chivo-Regular.woff);
+}
+@font-face {
+  font-family: chivoBold;
+  src: url(./../fonts/Chivo-Bold.woff);
+}

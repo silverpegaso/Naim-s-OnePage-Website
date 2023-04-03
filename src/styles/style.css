@@ -1,0 +1,121 @@
+@import url(./fonsts.css);
+:root {
+  --font-principal: chivoMedium sans-serif;
+  --color-fuente-header: #6b6b6b;
+  --color-secundary: #6357ff;
+  --color-ascent: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.logo {
+  width: 100%;
+  margin: 5px;
+}
+
+.menu {
+  font-family: var(--font-principal);
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 0;
+}
+
+.link {
+  color: var(--color-fuente-header);
+  text-decoration: none;
+  font-size: 30px;
+  /*font-weight: ;
+  /*background-color: #6357ff;*/
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+.home {
+  color: #ffffff;
+  background: url(../../src/imagenes/SVG/Mesa\ de\ trabajo\ 1.svg) no-repeat
+    center;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  align-items: end;
+}
+
+.home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0.767) 0%,
+    rgba(255, 255, 255, 0) 40%
+  );
+}
+.home__title {
+  margin-bottom: 7rem;
+  margin-left: 50px;
+  z-index: 34;
+  max-width: 450px;
+  display: block;
+  position: relative;
+}
+.home__title::after {
+  position: absolute;
+  content: '';
+  width: 200px;
+  border: 2px solid var(--color-ascent);
+}
+.home__title h1 {
+  font-family: var(--font-principal);
+  font-weight: 500;
+  font-size: 3rem;
+  color: #e5e5e5;
+}
+
+#quienes {
+  background-color: #6357ff;
+}
+
+#productos {
+  background-color: #e5e5e5;
+}
+
+#contacto {
+  background-color: #6357ff;
+}
