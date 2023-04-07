@@ -1,9 +1,11 @@
 @import url(./fonsts.css);
 :root {
-  --font-principal: chivoMedium sans-serif;
+  --font-principal-medium: chivoMedium, sans-serif;
+  --font-principal-regular: chivoRegular, sans-serif;
+  --font-principal-bold: chivoBold, sans-serif;
   --color-fuente-header: #6b6b6b;
   --color-secundary: #6357ff;
-  --color-ascent: #e5e5e5;
+  --color-gris: #e5e5e5;
 }
 
 * {
@@ -16,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: var(--font-principal-medium);
 }
 
 .main__content {
@@ -40,7 +42,6 @@ header {
 }
 
 .menu {
-  font-family: var(--font-principal);
   font-weight: 500;
   list-style: none;
   display: flex;
@@ -53,10 +54,10 @@ header {
   color: var(--color-fuente-header);
   text-decoration: none;
   font-size: 1.5rem;
-  /*font-weight: ;
-  /*background-color: #6357ff;*/
+  font-family: var(--font-principal-medium);
   padding: 5px 10px;
   border-radius: 5px;
+  font-weight: 500;
 }
 
 .home {
@@ -80,14 +81,14 @@ header {
   background: linear-gradient(
     0deg,
     rgba(2, 0, 36, 0.767) 0%,
-    rgba(255, 255, 255, 0) 40%
+    rgba(255, 255, 255, 0) 50%
   );
 }
 .home__title {
   margin-bottom: 7rem;
   margin-left: 50px;
   z-index: 34;
-  max-width: 450px;
+  max-width: 500px;
   display: block;
   position: relative;
 }
@@ -95,13 +96,13 @@ header {
   position: absolute;
   content: '';
   width: 200px;
-  border: 2px solid var(--color-ascent);
+  border: 2px solid var(--color-gris);
 }
 .home__title h1 {
-  font-family: var(--font-principal);
+  font-family: var(--font-principal-medium);
   font-weight: 500;
   font-size: 3rem;
-  color: #e5e5e5;
+  color: #fff;
 }
 
 .quienes {
@@ -137,7 +138,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--color-ascent);
+  color: var(--color-gris);
 }
 .quienes__logo img {
   width: 600px;
@@ -147,34 +148,129 @@ header {
   flex-direction: row;
 }
 .hero__icons img {
-  margin-left: 100px;
+  /* margin-left: 100px; */
   height: 70%;
 }
 .hero__info {
   display: flex;
   flex-direction: column;
-  max-width: 520px;
-  height: 500px;
+  max-width: 650px;
+  height: 560px;
   gap: 100px;
   margin: 10px;
 }
 .hero__info h3 {
-  border: 2px solid var(--color-ascent);
+  font-family: var(--font-principal-regular);
   padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 .hero__service {
-  border: 2px solid var(--color-ascent);
   padding: 10px 35px;
 }
 .hero__service li {
-  font-family: var(--font-principal);
+  font-family: var(--font-principal-bold);
   font-size: 25px;
-  font-weight: bold;
-}
-.productos {
-  background-color: var(--color-ascent);
+  font-weight: 500;
 }
 
-#contacto {
+.quienes__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+}
+.quienes__footer h3 {
+  color: var(--color-gris);
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.quienes__footer img {
+  width: 140px;
+}
+.productos {
+  background-color: #fff;
+  position: relative;
+  height: 1400px;
+}
+
+.productos::after {
+  content: '';
+  background: no-repeat url(../vectores/PNG/logoFondo.png);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: -833px;
+  width: 2186px;
+  height: 100%;
+  z-index: 0;
+  /* opacity: 0.2; */
+
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  -ms-pointer-events: none;
+  -o-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.productos__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 550px);
+  place-content: top;
+  place-items: center;
+  gap: 40px;
+  padding: 40px;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 390px;
+  /* height: 490px; */
+  border-radius: 20px;
+  box-shadow: 0px 0px 21px 7px var(--color-fuente-header);
+  z-index: 100;
+}
+
+.card__imagen {
+  width: 390px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 0px 21px 7px var(--color-fuente-header);
+}
+.card__descripcion {
+  font-family: var(--font-principal-bold);
+  color: var(--color-fuente-header);
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.card__descripcion p {
+  margin: 0;
+}
+.contacto {
   background-color: var(--color-secundary);
+  position: relative;
 }
