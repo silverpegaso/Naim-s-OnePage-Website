@@ -18,7 +18,10 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: var(--font-principal-medium);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .main__content {
@@ -194,7 +197,11 @@ header {
 .productos {
   background-color: #fff;
   position: relative;
-  height: 1400px;
+  /* width: 95vw; */
+  height: 1800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .productos::after {
@@ -207,7 +214,6 @@ header {
   width: 2186px;
   height: 100%;
   z-index: 0;
-  /* opacity: 0.2; */
 
   -webkit-pointer-events: none;
   -moz-pointer-events: none;
@@ -243,7 +249,6 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 390px;
-  /* height: 490px; */
   border-radius: 20px;
   box-shadow: 0px 0px 21px 7px var(--color-fuente-header);
   z-index: 100;
@@ -270,7 +275,63 @@ header {
 .card__descripcion p {
   margin: 0;
 }
+
+/* SECCION CONTACTO */
+
 .contacto {
+  display: flex;
+  justify-content: end;
+  z-index: 9;
+  text-align: left;
+}
+.contacto__content {
   background-color: var(--color-secundary);
-  position: relative;
+  height: 400px;
+  width: 90%;
+  float: right;
+  border-radius: 70px 0 0 0;
+  color: var(--color-gris);
+  padding: 30px;
+}
+.contacto__content h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.contacto__content ul {
+  text-align: left;
+  list-style: none;
+}
+.contacto__content ul li {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-family: var(--font-principal-bold);
+}
+
+/* SECCION FOOTER */
+.footer {
+  display: flex;
+  height: 70px;
+  background-color: var(--color-fuente-header);
+  color: var(--color-gris);
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9;
+}
+.footer__logo {
+  width: 250px;
+}
+.footer__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer__link {
+  color: var(--color-gris);
+  text-decoration: none;
 }
