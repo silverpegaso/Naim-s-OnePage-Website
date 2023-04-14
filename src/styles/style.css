@@ -32,13 +32,15 @@ header {
   width: 100%;
   height: 5rem;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   position: fixed;
   background-color: #ffffff;
   z-index: 999;
 }
-
+header a {
+  margin-left: 100px;
+}
 .header__logo {
   width: 250px;
   margin: 5px;
@@ -94,6 +96,7 @@ header {
   max-width: 500px;
   display: block;
   position: relative;
+  margin-left: 190px;
 }
 .home__title::after {
   position: absolute;
@@ -149,10 +152,12 @@ header {
 .quienes__hero {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  margin-left: 310px;
 }
 .hero__icons img {
   /* margin-left: 100px; */
-  height: 70%;
+  height: 60%;
 }
 .hero__info {
   display: flex;
@@ -184,7 +189,8 @@ header {
   padding: 20px;
   position: absolute;
   bottom: 100px;
-  width: 100%;
+  width: 80%;
+  margin-left: 190px;
 }
 .quienes__footer h3 {
   color: var(--color-gris);
@@ -238,8 +244,8 @@ header {
   padding: 40px;
   position: absolute;
   top: -150px;
-  left: 0;
-  right: 0;
+  left: 210px;
+  right: 210px;
   bottom: 0;
 }
 
@@ -248,15 +254,15 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 390px;
+  width: 320px;
   border-radius: 20px;
   box-shadow: 0px 0px 21px 7px var(--color-fuente-header);
   z-index: 100;
 }
 
 .card__imagen {
-  width: 390px;
-  height: 390px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0px 0px 21px 7px var(--color-fuente-header);
@@ -267,7 +273,7 @@ header {
   height: 100px;
   text-align: center;
   vertical-align: middle;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -296,11 +302,13 @@ header {
 .contacto__content h2 {
   font-weight: normal;
   font-size: 1.5rem;
+  margin-left: 25px;
 }
 
 .contacto__content ul {
   text-align: left;
   list-style: none;
+  padding: 0;
 }
 .contacto__content ul li {
   display: flex;
@@ -318,6 +326,7 @@ header {
   justify-content: space-around;
   align-items: center;
   z-index: 9;
+  gap: 40px;
 }
 .footer__logo {
   width: 250px;
